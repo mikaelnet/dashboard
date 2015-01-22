@@ -1,4 +1,4 @@
-var serveStatic = require('serve-static');
+var config = require('./config');
 
 var finalhandler = require('finalhandler')
 var http = require('http')
@@ -14,4 +14,5 @@ var server = http.createServer(function(req, res){
 })
 
 // Listen
-server.listen(3000)
+console.log('Listening on localhost:'+config.port);
+server.listen(config.port)
